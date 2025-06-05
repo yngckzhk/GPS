@@ -1,0 +1,14 @@
+navigator.geolocation.getCurrentPosition(
+  function(position) {
+    console.log("緯度: " + position.coords.latitude);
+    console.log("経度: " + position.coords.longitude);
+  },
+  function(error) {
+    console.error("エラー: " + error.message);
+  },
+  {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+  }
+);
